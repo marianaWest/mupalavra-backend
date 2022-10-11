@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mupalavra</title>
+</head>
+<body>
+    <h1>Nova entrada</h1>
+    <ul class="novosTermos"> 
+    <% for(let i=0; i < info.length; i++) {%>
+        <li class="termoMupa">
+            <span><%= info[i].termo %></span> 
+            <span><%= info[i].descricaoTermo %></span>
+            <span><%= info[i].likes %></span>
+            <span class='fa fa-thumbs-up'></span>
+           
+            <span class='fa fa-trash'></span>
+        </li>
+    <% } %>
+    </ul>
+
+    <h2>Adicione um novo termo:</h2>
+
+    <form action="/addTermo" method="POST">
+        <input type="text" placeholder="termo" name="inputTermo">
+        <input type="text" placeholder="descreva o termo" name="descricao">
+        <input type="submit">
+    </form>
+    
+
+    <script src='js/main.js'></script>
+</body>
+</html>

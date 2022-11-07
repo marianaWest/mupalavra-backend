@@ -1,97 +1,38 @@
 # Mupalavra-backend
 
-[PLACE_FOR_YOUR_IMAGE]
+<img width="265" alt="muapalavra_backend" src="https://user-images.githubusercontent.com/97693233/200321996-8588e947-bbd5-4ced-b49d-f3a6d729f188.PNG">
 
-[PLACE_TO_ADD_LINK_FOR_DEPLOYED_VERSION]
 
-[Add some introduction about your project. What is the purpose of it? What problem does it solve? What it does?]
+This is a web application that allows the researchers at the Paranaense Museum in Brazil to enter new words to a database, and then added to the Mupalavra game, based on Wordle.   
+  - The researcher enters a word related to the Museum collection and its description.  
+  - The word and description are saved on a Mongo database. 
+  - The word is accessed by the Mupalavra game.  
+  - The researcher can delete the word and description, and "like" if they agree with the new entry suggested by another researcher.  
+  
+# Built with
 
-**Example:**
+  - JavaScript  
+  - Node.js  
+  - Express  
+  - Bootstrap  
 
-  {YOUR_PROJECT_NAME} is a web application to check the weather in any location in world! 
-  - Enter the name of the city you want to know the weather for. 
-  - Get the weather for your current location.
-  - Get the weather forecast for up to 4 weeks!
-
-# Technologies in use / Tech Stack / Built with
-
-[Add the main technologies you used to build this project]
-
-**Example:**
-
-  - TypeScript
-  - React
-  - Redux
-  - TailwindCSS
-  - Node.js
-  - Express
 
 # Installation
 
-[Explain how to install your project locally. Technical person would want to clone your repo, check code and run it locally]
-
-**Example:**
-
-To install {YOUR_PROJECT_NAME} locally, please follow the steps below:
+To install Mupalavra-backend locally, please follow the steps below:
   - Clone repo to your machine
   - Open the root of the project and install all dependencies with `npm i` / `yarn`
+  -  Connect to a MongoDB and enter the DB string on an .env file located in the root of the project.  
   - Project has various scripts to run:
-    - `npm start` - running local version
-    - `npm run test` - run tests
+    - `npm start` - running local version  
+    - node server.js  
 
 # What I have learned
 
-[Tell more about what you have learned while building this project]
+While I was building Mupalavra-backend I have learned the fundamentals of building a MongoDB database and a CRUD web app.  
 
-**Example:**
-
-While I was building {YOUR_PROJECT_NAME} I have learned the fundamentals of React and Redux. I learned what is the difference between React Context API and Redux, and what works best for my current application. I have used Reat hooks like useEffect, useState. It was my first project using TypeScript and I have learned a lot about TypeScript type definitions and fundamentals.
-
-# What issues have I faced and how I resolved them
-
-[Tell what was hard in the process of building the project. Tell about where have you feel stuck and how did you overcome this.]
-
-**Example:**
-
-When I tried to connect to the third-party API, I was not sure how to use fetch and what is the difference between async/await, what are Promises and how to use them. After some Googling I found out the MDN documentation about async/await and tried to use it in practice - it worked! 
 
 # Source
 
-[Is this project was part of the course? Is it your own idea? Is it came from community?]
-
-**Example:**
-
-This project is done as part of the SheCodes course curriculum. 
-
-
-# ---- TEMPLATE ENDS HERE ---- 
-
-This is definitely way better than your generic Create React App README. Use it, make your projects stand out from the rest. 
-
-# Contribution
-
-Feel free to contribute in any way possible. To contribute, please do the following:
-
-- `git clone` this repo
-- Go to the root folder of this project and checkout to another branch
-- `git checkout {your-nickname}-rename-title
-- Do your stuff
-- `git add .`
-- `git commit -m "any descriptive message"`
-- `git push origin {your-nickname}-rename-title`
-- Submit a PR for review
-
-# For beginners with love
-
-
-> Simple app to enable the Paranaense Museum to enter terms and descriptions related to their collection to a database on MongoDB.
-
-NPM 8.15.0
-
-## Development setup
-
-```sh
-npm install
-```
-
+This project was done as part of the 100Devs course curriculum. 
 

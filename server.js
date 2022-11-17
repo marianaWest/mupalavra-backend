@@ -24,17 +24,17 @@ app.use(express.json())
 app.get('/',(request, response)=>{
     db.collection('termos').find().sort({likes: -1}).toArray() 
     .then(data => {
+        console.log(data)
         response.render('index.ejs', { info: data })
     })
     .catch(error => console.error(error))
 })
 
 
-app.post('/addTermo', (request, response) => { // was 'addRappers'
-    db.collection('termos').insertOne({termo: request.body.inputTermo, //'rappers'
+app.post('/addTermo', (request, response) => { 
+    db.collection('termos').insertOne({termo: request.body.inputTermo, 
     descricaoTermo: request.body.descricao, 
     likes: 0}) 
-    // birthName: request.body.birthName, likes: 0}) 
     .then(result => {
         console.log('Termo adicionado')
         response.redirect('/')

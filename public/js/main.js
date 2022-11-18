@@ -11,18 +11,14 @@ Array.from(thumbText).forEach((element)=>{
 
 async function deletarTermo(){
     const sTermo = this.parentNode.childNodes[1].innerText
-    // sName
     const descricaoT = this.parentNode.childNodes[3].innerText
-    // const bName = this.parentNode.childNodes[3].innerText
     try{
         const response = await fetch('deletarTermo', {
             method: 'delete',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
                'termoS': sTermo,
-            //   'stageNameS': sName,
               'descricaoTermoS': descricaoT
-              // 'birthNameS': bName
             })
           })
         const data = await response.json()
@@ -44,9 +40,7 @@ async function addLike(){
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
               'termoS': sTermo,
-              // 'stageNameS': sName,
               'descricaoTermoS': descricaoT,
-              // 'birthNameS': bName,
               'likesS': tLikes
             })
           })

@@ -22,7 +22,7 @@ app.use(express.json())
 
 
 app.get('/',(request, response)=>{
-    db.collection('termos').find().sort({likes: -1}).toArray() 
+    db.collection('termos').find().toArray()  
     .then(data => {
         console.log(data)
         response.render('index.ejs', { info: data })
@@ -42,28 +42,28 @@ app.post('/addTermo', (request, response) => {
     .catch(error => console.error(error))
 })
 
-app.put('/addOneLike', (request, response) => {
-    db.collection('termos').updateOne({termo: request.body.termoS, descricaoTermo: request.body.descricaoTermoS, likes: request.body.likesS},{
-        $set: {
-            likes:request.body.likesS + 1
-          }
-    },{
-        sort: {_id: -1},
-        upsert: true
-    })
-    .then(result => {
-        console.log('Added One Like')
-        response.json('Like Added')
-    })
-    .catch(error => console.error(error))
+// app.put('/addOneLike', (request, response) => {
+//     db.collection('termos').updateOne({termo: request.body.termoS, descricaoTermo: request.body.descricaoTermoS, likes: request.body.likesS},{
+//         $set: {
+//             likes:request.body.likesS + 1
+//           }
+//     },{
+//         sort: {_id: -1},
+//         upsert: true
+//     })
+//     .then(result => {
+//         console.log('Added One Like')
+//         response.json('Like Added')
+//     })
+//     .catch(error => console.error(error))
 
-})
+// })
 
-app.delete('/deletarTermo', (request, response) => { //deleteRapper
-    db.collection('termos').deleteOne({termo: request.body.termoS}) //rappers
+app.delete('/deletarTermo', (request, response) => { 
+    db.collection('termos').deleteOne({termo: request.body.termoS}) 
     .then(result => {
-        console.log('Termo apagado') //rapper deleted
-        response.json('Termo apagado') // 'Rapper Deleted'
+        console.log('Termo apagado') 
+        response.json('Termo apagado') 
     })
     .catch(error => console.error(error))
 
